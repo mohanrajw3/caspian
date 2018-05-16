@@ -1,5 +1,5 @@
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
@@ -9,17 +9,19 @@ public class AddStudent {
 
         try {
             // WebDriver & Launch Browser
-            System.setProperty("webdriver.chrome.driver", "P:/Softwares/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
 
             // Call Java Class to another Class
             //ClassName objName = new ClassName();
             ChromeDriver driver = new ChromeDriver();
 
+
             // Load URL
-            driver.get("http://sit2.skooly.us/skoolyweb/");
+            driver.get("http://sit01.getskooly.com/skoolyweb/");
 
             // Maximize
             driver.manage().window().maximize();
+
             Thread.sleep(6000);
             // Enter the UserName
             driver.findElementById("username").sendKeys("finoculus@mailinator.com");
@@ -65,7 +67,7 @@ public class AddStudent {
 
 
             driver.findElementByClassName("fstControls").click();
-            driver.findElementByClassName("fstQueryInput").sendKeys("Active Ai Server",Keys.ARROW_DOWN,Keys.ARROW_DOWN, Keys.ENTER);
+            driver.findElementByClassName("fstQueryInput").sendKeys("Hello World",Keys.ARROW_DOWN,Keys.ARROW_DOWN, Keys.ENTER);
 
 
 
@@ -76,6 +78,11 @@ public class AddStudent {
 //            Select oSelect = new Select(driver.findElement(By.id("addStudentGradeBox")));
 //
 //            oSelect.selectByVisibleText("Junior KG");
+            String a = "window.open('http://sit01.getskooly.com/skoolyweb/');";
+            ((JavascriptExecutor)driver).executeScript(a);
+
+
+
 
 
 
@@ -93,6 +100,6 @@ public class AddStudent {
     }
 
 
-    public void hitDownKey(){
-    }
+    //  public void hitDownKey(){
 }
+
