@@ -26,6 +26,8 @@ public class SchoolSetupFlow extends AppConstants{
 
             readValuesFromPropertyFiles(prop, input);
             SignupSchool.signUpSchool(driver);
+            SetupWizard.preschoolSetUpWizrd(driver);
+
 
 
 

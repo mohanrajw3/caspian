@@ -23,6 +23,15 @@ public class AppConstants {
     public static String baseUrl;
     public static String studentName;
     public static String signUpUrl;
+    public static String programmeName;
+    public static String classRoomName1;
+    public static String classRoomName2;
+    public static String classRoomName3;
+    public static String classRoomName4;
+    public static String teacherId1;
+    public static String teacherId2;
+    public static String teacherId3;
+    public static String teacherId4;
 
 
     public static void readValuesFromPropertyFiles(Properties prop, InputStream input) throws IOException {
@@ -45,6 +54,15 @@ public class AppConstants {
         baseUrl = prop.getProperty("baseUrl");
         studentName = prop.getProperty("studentName");
         signUpUrl = prop.getProperty("signUpUrl");
+        programmeName = prop.getProperty("programmeName");
+        classRoomName1 = prop.getProperty("classRoomName1");
+        classRoomName2 = prop.getProperty("classRoomName2");
+        classRoomName3 = prop.getProperty("classRoomName3");
+        classRoomName4 = prop.getProperty("classRoomName4");
+        teacherId1 = prop.getProperty("teacherId1");
+        teacherId2 = prop.getProperty("teacherId2");
+        teacherId3 = prop.getProperty("teacherId3");
+        teacherId4 = prop.getProperty("teacherId4");
     }
 
 }
